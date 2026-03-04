@@ -1160,8 +1160,30 @@ footer {
   .hamburger { display: flex; }
 
   .portfolio-grid { grid-template-columns: 1fr; }
-  .portfolio-card { aspect-ratio: 3/2; }
-  .portfolio-card .portfolio-card-logo { padding: 32px; }
+
+  .portfolio-card {
+    aspect-ratio: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .portfolio-card .portfolio-card-logo {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 32px;
+    flex-shrink: 0;
+  }
+
+  .portfolio-card-content {
+    position: static;
+    padding: 0 32px 32px;
+  }
+
+  .portfolio-card .portfolio-desc {
+    opacity: 1;
+    transform: none;
+  }
   .approach-grid { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
   .about-stats { grid-template-columns: 1fr 1fr; gap: 24px; }
